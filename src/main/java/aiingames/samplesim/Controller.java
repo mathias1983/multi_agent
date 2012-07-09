@@ -8,6 +8,7 @@ import aiingames.samplesim.gui.Gui;
 import aiingames.samplesim.simulation.Environment;
 import aiingames.samplesim.simulation.Simulation;
 import aiingames.samplesim.spatial.Coordinate;
+import aiingames.samplesim.spatial.Path;
 
 public class Controller {
 
@@ -43,6 +44,12 @@ public class Controller {
 
         Agent follow_4 = new FollowAgent("FollowAgent_4", lights);
         sim.addAgent(follow_4, new Coordinate(get_random_value(), get_random_value()));
+        
+        Path path = new Path();
+      //  path.get_intersection_point( new Coordinate( 0,1 ), new Coordinate( 4,5.5 ),  new Coordinate( 0,5 ), new Coordinate( 4,3 ) );
+        
+        path.get_shortest_vector_to_path( new Coordinate( 0,1 ), new Coordinate( 4,5.5 ), new Coordinate( 3,5 ) );
+        
 //
 //        Agent follow_5 = new FollowAgent("FollowAgent_5", lights);
 //        sim.addAgent(follow_5, new Coordinate(get_random_value(), get_random_value()));

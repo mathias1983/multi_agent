@@ -2,6 +2,11 @@ package aiingames.samplesim.spatial;
 
 public class Util 
 {
+	public static double get_length( double x1, double y1, double x2, double y2  )
+	{
+		return Math.sqrt( (x1*x1+y1*y1+x2*x2+y2*y2) );
+	}
+	
 	public static double to_degree( double x, double y )
 	{
 		if( y < 0 && x > 0) // 1
