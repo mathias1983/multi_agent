@@ -49,7 +49,7 @@ public class Path
 	 * @param coA Startpunkt gerade a
 	 * @param coB Endpunkt   Gerade a
 	 * @param coC Punkt B
-	 * @return kürzester Vector zwischen Gerade A und Pubkt B
+	 * @return kürzester Vector zwischen Gerade A und Punkt B (NICHT NORMALISIERT)
 	 */
 	public Coordinate get_shortest_vector_to_path( Coordinate coA, Coordinate coB, Coordinate coC )
 	{

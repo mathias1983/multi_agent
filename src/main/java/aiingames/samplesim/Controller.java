@@ -7,8 +7,10 @@ import aiingames.samplesim.agents.*;
 import aiingames.samplesim.gui.Gui;
 import aiingames.samplesim.simulation.Environment;
 import aiingames.samplesim.simulation.Simulation;
+import aiingames.samplesim.spatial.CircleCut2;
 import aiingames.samplesim.spatial.Coordinate;
 import aiingames.samplesim.spatial.Path;
+import aiingames.samplesim.spatial.Util;
 
 public class Controller {
 
@@ -49,6 +51,12 @@ public class Controller {
       //  path.get_intersection_point( new Coordinate( 0,1 ), new Coordinate( 4,5.5 ),  new Coordinate( 0,5 ), new Coordinate( 4,3 ) );
         
         path.get_shortest_vector_to_path( new Coordinate( 0,1 ), new Coordinate( 4,5.5 ), new Coordinate( 3,5 ) );
+        
+        //CircleCut2.calc(100.0, 100.0, 50.0, 10.0, 245.0, 50.0);
+        
+        CircleCut2.calc_intersections( new Coordinate( 0,-3 ),  new Coordinate( 0,0 ), 5,5 );
+        
+        double test = Util.get_length(-9, 1, 5, -5);
         
 //
 //        Agent follow_5 = new FollowAgent("FollowAgent_5", lights);
